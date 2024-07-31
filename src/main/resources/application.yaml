@@ -16,6 +16,8 @@ spring:
       hibernate:
         ddl-auto: create
         format_sql: true
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
 
 logging:
   level:
@@ -24,3 +26,6 @@ logging:
         type:
           descriptor:
             sql: trace
+
+server:
+  shutdown: graceful

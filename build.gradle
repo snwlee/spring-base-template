@@ -4,11 +4,13 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.4'
 }
 
-group = 'com.pgrrr'
+group = 'com.snwlee'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '17'
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
 }
 
 configurations {
@@ -31,6 +33,30 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// Spring Security: 애플리케이션 보안 기능 제공
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	// Redis: 인메모리 데이터 저장소 캐싱 및 세션 관리
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+	// Lettuce: Redis 클라이언트 라이브러리 비동기 및 반응형 API 지원
+	implementation 'io.lettuce:lettuce-core'
+
+	// JWT (JSON Web Token) 라이브러리
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+	// OAuth2 클라이언트: OAuth2 인증 및 인가 기능 제공
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
+	// Querydsl: 타입 안전한 쿼리 작성 라이브러리
+	implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+	annotationProcessor "com.querydsl:querydsl-apt:${dependencyManagement.importedProperties['querydsl.version']}:jakarta"
+	annotationProcessor "jakarta.annotation:jakarta.annotation-api"
+	annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 }
 
 tasks.named('test') {
