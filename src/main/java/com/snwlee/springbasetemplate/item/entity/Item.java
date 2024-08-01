@@ -1,6 +1,7 @@
-package com.pgrrr.springbasetemplate.entity;
+package com.snwlee.springbasetemplate.item.entity;
 
-import com.pgrrr.springbasetemplate.dto.ItemResponseDto;
+import com.snwlee.springbasetemplate.common.entity.BaseTimeEntity;
+import com.snwlee.springbasetemplate.item.dto.ItemResponseDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,7 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Item extends BaseEntity{
+public class Item extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

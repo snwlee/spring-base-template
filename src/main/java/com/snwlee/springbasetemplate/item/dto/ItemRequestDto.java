@@ -1,6 +1,6 @@
-package com.pgrrr.springbasetemplate.dto;
+package com.snwlee.springbasetemplate.item.dto;
 
-import com.pgrrr.springbasetemplate.entity.Item;
+import com.snwlee.springbasetemplate.item.entity.Item;
 import lombok.Getter;
 import lombok.ToString;
 

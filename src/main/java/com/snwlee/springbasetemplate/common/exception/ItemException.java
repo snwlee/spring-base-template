@@ -1,4 +1,4 @@
-package com.pgrrr.springbasetemplate.exception;
+package com.snwlee.springbasetemplate.common.exception;
 
 import lombok.AccessLevel;
 import lombok.Getter;

@@ -1,13 +1,13 @@
-package com.pgrrr.springbasetemplate.service;
+package com.snwlee.springbasetemplate.item.service;
 
-import com.pgrrr.springbasetemplate.annotation.Retry;
-import com.pgrrr.springbasetemplate.annotation.Trace;
-import com.pgrrr.springbasetemplate.dto.ItemRequestDto;
-import com.pgrrr.springbasetemplate.dto.ItemResponseDto;
-import com.pgrrr.springbasetemplate.entity.Item;
-import com.pgrrr.springbasetemplate.exception.ErrorCode;
-import com.pgrrr.springbasetemplate.exception.ItemException;
-import com.pgrrr.springbasetemplate.repository.ItemRepository;
+import com.snwlee.springbasetemplate.common.annotation.Retry;
+import com.snwlee.springbasetemplate.common.annotation.Trace;
+import com.snwlee.springbasetemplate.item.dto.ItemRequestDto;
+import com.snwlee.springbasetemplate.item.dto.ItemResponseDto;
+import com.snwlee.springbasetemplate.item.entity.Item;
+import com.snwlee.springbasetemplate.common.exception.ErrorCode;
+import com.snwlee.springbasetemplate.common.exception.ItemException;
+import com.snwlee.springbasetemplate.item.repository.ItemRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

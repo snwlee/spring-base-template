@@ -1,4 +1,4 @@
-package com.pgrrr.springbasetemplate.dto;
+package com.snwlee.springbasetemplate.item.dto;
 
 import lombok.Builder;
 import lombok.Getter;

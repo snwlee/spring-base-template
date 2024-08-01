@@ -1,7 +1,7 @@
-package com.pgrrr.springbasetemplate.service;
+package com.snwlee.springbasetemplate.item.service;
 
-import com.pgrrr.springbasetemplate.dto.ItemRequestDto;
-import com.pgrrr.springbasetemplate.dto.ItemResponseDto;
+import com.snwlee.springbasetemplate.item.dto.ItemRequestDto;
+import com.snwlee.springbasetemplate.item.dto.ItemResponseDto;
 
 import java.util.List;
 

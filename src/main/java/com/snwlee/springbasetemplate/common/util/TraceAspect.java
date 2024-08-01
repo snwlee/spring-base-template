@@ -1,4 +1,4 @@
-package com.pgrrr.springbasetemplate.util;
+package com.snwlee.springbasetemplate.common.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;

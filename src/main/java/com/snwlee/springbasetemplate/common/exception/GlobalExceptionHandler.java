@@ -1,4 +1,4 @@
-package com.pgrrr.springbasetemplate.exception;
+package com.snwlee.springbasetemplate.common.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

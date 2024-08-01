@@ -1,6 +1,6 @@
-package com.pgrrr.springbasetemplate.util;
+package com.snwlee.springbasetemplate.common.util;
 
-import com.pgrrr.springbasetemplate.annotation.Retry;
+import com.snwlee.springbasetemplate.common.annotation.Retry;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
