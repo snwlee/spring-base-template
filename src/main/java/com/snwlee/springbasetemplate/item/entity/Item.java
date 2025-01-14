@@ -1,15 +1,19 @@
 package com.snwlee.springbasetemplate.item.entity;
 
 import com.snwlee.springbasetemplate.common.entity.BaseTimeEntity;
+import com.snwlee.springbasetemplate.item.dto.ItemRequestDto;
 import com.snwlee.springbasetemplate.item.dto.ItemResponseDto;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.Accessors;
 
 @Entity
 @Table(name = "item")
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@NoArgsConstructor
 @Builder
+@Accessors(chain = true)
 public class Item extends BaseTimeEntity {
 
     @Id
@@ -30,4 +34,8 @@ public class Item extends BaseTimeEntity {
                 .build();
     }
 
+    public void update(ItemRequestDto itemRequestDto) {
+        this.itemName = itemRequestDto.getItemName();
+        this.itemDesc = itemRequestDto.getItemDesc();
+    }
 }

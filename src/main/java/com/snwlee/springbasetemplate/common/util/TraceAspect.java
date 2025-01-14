@@ -12,14 +12,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class TraceAspect {
 
-    @Before("@annotation(com.pgrrr.springbasetemplate.annotation.Trace)")
+    @Before("@annotation(com.snwlee.springbasetemplate.common.annotation.Trace)")
     public void logMethodEntry(JoinPoint joinPoint) {
         String methodName = joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
         log.info("[trace] Entering method={} args={}", methodName, args);
     }
 
-    @AfterReturning(pointcut = "@annotation(com.pgrrr.springbasetemplate.annotation.Trace)", returning = "result")
+    @AfterReturning(pointcut = "@annotation(com.snwlee.springbasetemplate.common.annotation.Trace)", returning = "result")
     public void logMethodExit(JoinPoint joinPoint, Object result) {
         String methodName = joinPoint.getSignature().getName();
         log.info("[trace] Exiting method={}, result={}", methodName, result);
