@@ -10,6 +10,8 @@ import com.snwlee.springbasetemplate.common.exception.ItemException;
 import com.snwlee.springbasetemplate.item.repository.ItemRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -47,10 +49,8 @@ public class ItemServiceImpl implements ItemService {
      */
     @Trace
     @Override
-    public List<ItemResponseDto> getItemList() {
-        return itemRepository.findAll().stream()
-                .map(Item::toDto)
-                .toList();
+    public Page<ItemResponseDto> getItemList(Pageable pageable) {
+        return itemRepository.findAll(pageable).map(Item::toDto);
     }
 
     /**
